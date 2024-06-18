@@ -1,14 +1,12 @@
 # spfx-pnp-js-example
 
-## Summary
-
-Short summary on functionality and used technologies.
+PnPJS example webpart.
 
 [picture of the solution in action, if possible]
 
 ## Used SharePoint Framework Version
 
-![version](https://img.shields.io/badge/version-1.18.2-green.svg)
+![Nekomart on Mobile](https://raw.githubusercontent.com/originlimit/spfx-pnp-js-example/main/screenshots/webpartscreenshot.png)
 
 ## Applies to
 
