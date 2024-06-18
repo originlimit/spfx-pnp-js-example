@@ -1,0 +1,39 @@
+_*Notes on this project.*_
+
+* General
+  - Sharepoint exposes APIs to operate on lists.
+  - List data is exposed as JSON, and edited via JSON.
+  - pnp/sp wraps the APIs into simple-use functions.
+  - CRUD operations on lists. (create, read, update, delete).
+
+* Issues legend
+  - [D] Documentation issues.
+  - [E] Type errors
+
+*** File references
+    - [1]{./src/webparts/pnPjsExample/components/PnPjsExample.tsx}
+    - [2]{./src/webparts/pnPjsExample/PnPjsExampleWebPart.ts}
+
+* Extra/Conflicts/Errors by solved/unsolved
+  - (x) [D] [1] IItemUpdateResult items import is NOT compatible with @pnp/sp 4.0+. The tutorial was made in 2023, while the package dependencies stated in said tutorial state that it is using some v3.x+ version.
+  --- Solution: Used v3.24.0, as this is the last 3.0+ update that doesn't conflict with the import declaration and code given.
+
+  - (x) [D] [E] [2] Promise<string> is not assignable to type string.
+  --- Solution: Abstracted to a message variable as an await for the _getEnvironmentMessage call, wherein _environmentMessage can be assigned to the variable without conflict.
+
+  - (x) [D] Workbench dependency is missing.
+  --- Solution: Install via npm
+
+  - (x) [D] [1] Office ui fabric bundle needs to be installed. PnPjsExample refers to this and imports necessary components.
+  --- Solution: Install the office ui fabric bundle via npm
+
+  - (x) Gulp serve does not serve the workbench content, despite the workbench bundle shadow dependency being present.
+  --- Solution: Use older gulp version and utilize npm gulp-cli, NOT regular gulp in pkgs.
+
+* Troubleshooting information
+  - Regarding the trust of certificates in modern versions of sharepoint, the directory referred to is NOT .gcb-serve-data. Instead, it was replaced with .rushstack.
+  --- {https://learn.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-development-environment#trusting-the-self-signed-developer-certificate}
+
+  - The preferred method recommended by MS support is to delete the dev cert directory and check the port's served content. In particular, /temp/manifest.json.
+  --- IF the manifest.json content is served, gulp is working as intended.
+

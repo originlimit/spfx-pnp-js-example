@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "spfx-pnp-js-example-client-side-solution",
+    "id": "c9a61c1c-b1b6-4808-851a-c4e920352ca9",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.18.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "spfx-pnp-js-example description"
+      },
+      "longDescription": {
+        "default": "spfx-pnp-js-example description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "spfx-pnp-js-example Feature",
+        "description": "The feature that activates elements of the spfx-pnp-js-example solution.",
+        "id": "05e82f70-2779-4a31-bf01-25cc5194ee81",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/spfx-pnp-js-example.sppkg"
+  }
+}
