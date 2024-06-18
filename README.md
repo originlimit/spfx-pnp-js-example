@@ -2,11 +2,11 @@
 
 PnPJS example webpart.
 
-[picture of the solution in action, if possible]
+![Nekomart on Mobile](https://raw.githubusercontent.com/originlimit/spfx-pnp-js-example/main/screenshots/webpartscreenshot.png)
 
 ## Used SharePoint Framework Version
 
-![Nekomart on Mobile](https://raw.githubusercontent.com/originlimit/spfx-pnp-js-example/main/screenshots/webpartscreenshot.png)
+![version](https://img.shields.io/badge/version-1.18.2-green.svg)
 
 ## Applies to
 
